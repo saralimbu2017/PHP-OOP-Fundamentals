@@ -14,12 +14,17 @@ class Person{
   public function getPersonName(){
     return "The name is:".$this->name;
   }
+
+  //destructor method
+  public function __destruct(){
+    echo "Destroying";
+  }
 }
   //creating object
   $personOne = new Person("Sara");
   //$personOne->name = "Sara";
   echo $personOne->getPersonName();
-
+  unset($personOne);
 
 ?>
 
