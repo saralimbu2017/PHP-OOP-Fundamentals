@@ -3,7 +3,12 @@
 <?php
 class Person{
   //attributes
-  public $name;
+  private $name;
+
+  //constructor method
+  public function __construct($name){
+    $this->name = $name;
+  }
 
   //public methods
   public function getPersonName(){
@@ -11,8 +16,8 @@ class Person{
   }
 }
   //creating object
-  $personOne = new Person;
-  $personOne->name = "Sara";
+  $personOne = new Person("Sara");
+  //$personOne->name = "Sara";
   echo $personOne->getPersonName();
 
 
